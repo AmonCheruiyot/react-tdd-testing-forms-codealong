@@ -10,7 +10,7 @@ test("size select element initially displays 'Small'", () => {
 
   const selectSize = screen.getByLabelText(/select size/i);
 
-  expect(selectSize).toHaveDisplayValue("small");
+  expect(selectSize).toHaveDisplayValue("Small");
 });
 
 test("select Size dropdown displays the user's selected value", () => {
@@ -20,11 +20,11 @@ test("select Size dropdown displays the user's selected value", () => {
 
   userEvent.selectOptions(selectSize, "medium");
 
-  expect(selectSize).toHaveDisplayValue("medium");
+  expect(selectSize).toHaveDisplayValue("Medium");
 
   userEvent.selectOptions(selectSize, "large");
 
-  expect(selectSize).toHaveDisplayValue("large");
+  expect(selectSize).toHaveDisplayValue("Large");
 });
 
 test("'Your Selection' message initially displays 'small cheese'", () => {
